@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "weui-rater": "../../components/rater/index"
+  }
+}

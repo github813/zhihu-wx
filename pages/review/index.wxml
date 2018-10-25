@@ -1,0 +1,16 @@
+<!--pages/review/index.wxml-->
+ <view class="page__bd" wx:if="{{review}}">
+  <view class='cont_con'  >
+    <view class='comment_title'>{{review.title}}</view>
+    <view class='comment_username'>
+      <image src='{{review.author.avatar}}'class="comment_userimg_small" mode='aspectFit'></image>
+      {{review.author.name}} <weui-rater score='{{review.rating.value}}' fontsize='{{28}}'  ></weui-rater>
+    </view>
+    <text>
+      {{review.content}}
+    </text>
+    
+        
+  </view>
+ </view>
+

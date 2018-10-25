@@ -1,0 +1,19 @@
+<!--components/scroll/scroll.wxml-->
+   <scroll-view class="scroll-view_x" scroll-x style="width: 100%">
+        <view class='scroll-view_x'>
+          <block wx:for='{{datajson}}' wx:key="{{item}}">
+            <navigator  class='li' url="../{{urlname}}/index?id={{item.id}}">
+               
+                <view class='img'>
+                    <image class='view_x_img' mode='aspectFit' src='{{item.images.large}}'></image>
+                </view>
+                 <text>{{item.title}}</text>
+                 <weui-rater    score='{{item.rating.average}}' fontsize='{{24}}'  ></weui-rater>  
+               
+                       
+              
+            </navigator>
+             
+          </block>
+        </view>
+    </scroll-view>

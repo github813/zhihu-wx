@@ -1,0 +1,8 @@
+<view class="section tc">
+<button bindtap="choosevideo">选择视频</button>
+  <video id="myVideo" src="{{src}}" autoplay='{{true}}' show-center-play-btn="{{false}}"  danmu-list='{{danmulist}}'     bindpause="funpause" binderror='videoerr'  enable-danmu danmu-btn controls></video>
+  <view class="btn-area">
+    <input bindblur="bindInputBlur"/>
+    <button bindtap="bindSendDanmu">发送弹幕</button>
+  </view>
+</view>

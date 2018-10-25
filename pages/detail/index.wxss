@@ -1,0 +1,21 @@
+/* pages/detail/index.wxss */
+.weui-media-box{ padding: 20rpx;}
+.movie_title{width:100%;display: block}
+.name_tips{font-size: 27rpx; line-height: 44rpx; padding-left: 20rpx;}
+.weui-media-box__hd_in-appmsg.douban_-media-img{width: 180rpx;  margin-right: 0; margin-left: 20rpx; height: 251rpx;}
+.weui-media-box__desc {-webkit-line-clamp:3}
+.movie_info{ padding:0 20rpx 20rpx;font-size: 28rpx;}
+.movie_info_title{ font-size: 32rpx; color: #42bd56; padding-top: 20rpx;}
+.hrefcss{color: #42bd56}
+
+.scroll-view_x{padding: 10rpx 0;  text-align: center;  white-space: nowrap}
+.scroll-view_x .li{margin-left: 6rpx;width: 256rpx; display: inline-block ;position: relative;}
+.li .img{width: 100%; font-size: 0;}
+.li   .view_x_img{ width: 100%; height: 160rpx; margin-bottom: 10rpx; }
+.scroll-view_x .li  .video { content: ""; position: absolute; top: 50%; margin-top: -30rpx; left: 50%; margin-left: -30rpx; width: 60rpx; height: 60rpx; }
+.comment_userimg{ width: 72rpx; height: 72rpx; margin-right: 20rpx; border-radius: 50%; }
+
+.comment_time{ color: #9999; }
+.ptop10{padding-top: 20rpx;}
+.comment_more{ text-align: center; padding-bottom: 20rpx; font-size: 28rpx; color: #42bd56;}
+ 

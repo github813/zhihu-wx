@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "rater": "../../components/rater1/rater",
+    "weui-rater": "../../components/rater/index",
+    "weui-scroll": "../../components/scroll/scroll"
+  }
+}

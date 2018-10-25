@@ -1,0 +1,6 @@
+.weui-search-bar{background: #42bd56;border-top: 0; padding-top: 0;}
+.weui-search-bar__cancel-btn{color: #fff}
+.container{ padding: 10rpx 20rpx 0; font-size: 28rpx;}
+
+
+ 

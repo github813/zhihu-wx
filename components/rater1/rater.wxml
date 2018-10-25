@@ -1,0 +1,6 @@
+<!--components/rater/rater.wxml-->
+<view class="inner">
+    <slot name="before"></slot>
+    <view bindtap="_incrementCounter">{{innerText}}</view>
+    <slot name="after"></slot>
+</view>

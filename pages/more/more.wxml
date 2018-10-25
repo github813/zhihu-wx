@@ -1,0 +1,15 @@
+<!--pages/more/more.wxml-->
+  <scroll-view scroll-y style="height: 100%"    >
+    <view class='scroll-view_y'>
+          <block wx:for='{{datajson}}' wx:key="{{item}}">
+            <navigator  class='li' url="../detail/index?id={{item.id}}">               
+                <view class='img'>
+                    <image class='view_x_img' mode='aspectFit' src='{{item.images.large}}'></image>
+                </view>
+                 <text>{{item.title}}</text>
+                 <weui-rater    score='{{item.rating.average}}' fontsize='{{24}}'  ></weui-rater>
+            </navigator>
+             
+          </block>
+        </view>
+  </scroll-view>

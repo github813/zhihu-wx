@@ -1,0 +1,75 @@
+<!--pages/detail/index.wxml-->
+<view class='page__bd'  wx:if='{{movieinfo}}'>
+  <view class="weui-panel weui-panel_access">
+             
+            <view class="weui-panel__bd">
+                <view url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                   
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">
+                          <span class='movie_title'>{{movieinfo.title}}</span>
+                          <weui-rater score='{{movieinfo.rating.average}}' fontsize='{{28}}'  ></weui-rater>  
+                          <span class='name_tips'>{{movieinfo.ratings_count}}评价</span>
+                        </view>
+                        <view class="weui-media-box__desc">{{movieinfo.year}}/
+                           <block wx:for='{{movieinfo.genres}}' wx:key="{{item}}">
+                           {{item}}/
+                           </block> 
+                            <block wx:for='{{movieinfo.casts}}' wx:key="{{item}}">
+                           {{item.name}}/
+                           </block>
+                            <block wx:for='{{movieinfo.directors}}' wx:key="{{item}}">
+                           {{item.name}}/
+                           </block>
+                           {{movieinfo.countries}}</view>
+                    </view>
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg douban_-media-img">
+                        <image class="weui-media-box__thumb" mode='aspectFit' src="{{movieinfo.images.large}}" />
+                    </view>
+                </view>
+            </view>
+             
+        </view>
+        <view class='movie_info'>
+            <view class='movie_info_title'>{{movieinfo.title}}的简介</view>
+            <view>
+            {{isExpand?smallsummary+"…":movieinfo.summary}}
+            <text class='hrefcss' bindtap="expand" wx:if='{{isExpand}}'  >展开</text>
+            </view>
+            <view class='movie_info_title'>{{movieinfo.title}}的图片</view>
+            <scroll-view class="scroll-view_x" scroll-x style="width: 100%;height:170rpx;">
+                <view class='scroll-view_x'>
+                  <block wx:for='{{movieinfo.bloopers}}' wx:key="{{item}}">
+                    <view  class='li' data-url='{{item.resource_url}}' bindtap='checkvideo'>                      
+                        <view class='img'>
+                            <image class='view_x_img' mode='aspectFit' src='{{item.medium}}'></image>
+                        </view> 
+                         <view class='img'>
+                            <image class='video' mode='aspectFit' src='https://img1.doubanio.com/f/movie/8e40329a1c8ce35415861dd848eab6c9f50292a7/pics/movie/play-black.png'></image>
+                        </view>
+                    </view>                    
+                  </block>
+                </view>
+            </scroll-view>
+            <view class='movie_info_title'>{{movieinfo.title}}的短评</view>
+            <block wx:for='{{comments}}' wx:key="{{item}}">
+              <view class="weui-flex ptop10">
+                  <view>
+                    <image src='{{item.author.avatar}}'class="comment_userimg" mode='aspectFit'></image>
+                  </view>
+                  <view class="weui-flex__item">
+                    <view class='comment_username'>{{item.author.name}} <weui-rater score='{{item.rating.value}}' fontsize='{{28}}'  ></weui-rater></view>
+                    <view class='comment_time'>{{item.created_at}}</view>
+                    <view class='comment_cont'>{{item.content}}</view>
+                  </view>
+              </view>
+            
+            
+            </block>
+           
+        </view>
+       <navigator  class='comment_more' url='../comment/index?id={{movieinfo.id}}'>查看更多评论</navigator>
+
+
+
+</view>

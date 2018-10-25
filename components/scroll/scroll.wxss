@@ -1,0 +1,7 @@
+/* components/scroll/scroll.wxss */
+.scroll-view_x{padding: 10rpx 0;  text-align: center;  white-space: nowrap}
+.scroll-view_x .li{margin-left: 20rpx;width: 256rpx; display: inline-block }
+.li .img{width: 100%; font-size: 0;}
+.li   .view_x_img{ width: 100%; height: 360rpx; margin-bottom: 10rpx; }
+.scroll-view_x text{width: 100%; overflow: hidden; display: block; font-size: 24rpx; text-align: center}
+.scroll-view_x text.tips{ color: #ccc; }

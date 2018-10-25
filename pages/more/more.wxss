@@ -1,0 +1,8 @@
+/* pages/more/more.wxss */
+
+.scroll-view_y{padding: 10rpx 0;  text-align: center;  }
+.scroll-view_y .li{margin-left: 20rpx;width: 216rpx; display: inline-block }
+.li .img{width: 100%; font-size: 0;}
+.li   .view_x_img{ width: 100%; height: 310rpx; margin-bottom: 10rpx; }
+.scroll-view_y text{width: 100%;white-space: nowrap;text-overflow: ellipsis; overflow: hidden; display: block; font-size: 24rpx; text-align: center}
+.scroll-view_y text.tips{ color: #ccc; }

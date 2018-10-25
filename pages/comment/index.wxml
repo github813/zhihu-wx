@@ -1,0 +1,49 @@
+<view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">最热短评</view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">最热影评</view>
+    
+</view>
+
+<swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab" style='height:{{windowHeight}}px;'>
+    <swiper-item >   
+      <view class='swiperitem'>
+          <scroll-view scroll-x="false" scroll-y="true" style=' height:{{windowHeight}}px;' scroll-top="{{scrollTop}}" scroll-y="true"   
+         bindscrolltolower="bindDownLoad" bindscroll="scroll" bindscrolltoupper="refresh" >
+            <block wx:for='{{comments}}' wx:key="{{item}}">
+        
+              <view class="weui-flex ptop10">
+                  <view>
+                    <image src='{{item.author.avatar}}'class="comment_userimg" mode='aspectFit'></image>
+                  </view>
+                  <view class="weui-flex__item">
+                    <view class='comment_username'>{{item.author.name}} <weui-rater score='{{item.rating.value}}' fontsize='{{28}}'  ></weui-rater></view>
+                    <view class='comment_time'>{{item.created_at}}</view>
+                    <view class='comment_cont'>{{item.content}}</view>
+                  </view>
+              </view>
+            </block>  
+            <view style='width:100%; height:60px;'></view> 
+          </scroll-view>  
+      </view> 
+    </swiper-item>
+    <swiper-item>
+      <view class='swiperitem_long'>
+       <scroll-view scroll-x="false" scroll-y="true" style=' height:{{windowHeight}}px;' scroll-top="{{scrollTop}}" scroll-y="true"   
+         bindscrolltolower="bindDownLoad" bindscroll="scroll" bindscrolltoupper="refresh" >
+          <block wx:for='{{reviews}}' wx:key="{{item}}" wx:for-index="idx">
+            <view class='comment_li' bindtap='checkdetal' data-index='{{idx}}'>
+              <view class='comment_title'>{{item.title}}</view>
+              <view class='comment_username'>
+              <image src='{{item.author.avatar}}'class="comment_userimg_small" mode='aspectFit'></image>
+              {{item.author.name}} <weui-rater score='{{item.rating.value}}' fontsize='{{28}}'  ></weui-rater></view>
+            </view>
+          </block>
+         </scroll-view>
+        
+       
+        
+      
+      </view>
+      
+    </swiper-item>    
+</swiper>

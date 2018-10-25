@@ -1,0 +1,17 @@
+/* components/rater/rater.wxss */
+
+rating {
+    margin-top:10rpx;
+    font-size:28rpx;
+    color: #aaa;
+}
+.star-half,.star-full{
+    display: inline-block;
+    width: 30rpx;
+    height: 30rpx;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR…0bce6SGEo9UDnodJ2dnX9hu4p/FxP40B+HzLOzs6iL0vYPbfQF9yQ167cAAAAASUVORK5CYII=);
+    background-size:30rpx 30rpx;
+}
+.star-full{   
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR…tDDr2fN/43wYvMaFkK1dOALNjlJa6Z8RuIP0vfAZfVhj/iqoy46fpKwgAAAABJRU5ErkJggg==); 
+}

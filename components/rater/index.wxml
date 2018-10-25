@@ -1,0 +1,21 @@
+<!--components/rater/index.wxml-->
+
+<view  class='weui-rater weui-class'>
+  <text class='tips' wx:if='{{score==0}}'  >暂无评分</text>
+  <block wx:if='{{score>0}}'>
+    <block wx:for="{{max}}" >   
+      <view class="weui-rater__box" data-index='{{index}}' bindtap='checkscore'
+                style="color:{{relscore>index+1||relscore==index+1?'#fc6':'#ccc'}}; font-size: {{fontsize}}rpx; width: {{fontsize}}rpx; height: {{fontsize}}rpx; line-height: {{fontsize}}rpx">
+            <view class="weui-rater__inner">
+                {{ star }}
+                <view class="weui-rater__outer" style="color: #fc6; width: {{percent}}%" wx:if='{{integer==index&&percent>0}}'>
+                    {{ star }}
+                </view>
+            </view>
+        </view>
+    </block>
+    <view class='scroe' style='font-size: {{fontsize}}rpx;line-height: {{fontsize}}rpx'>{{score}}分</view>
+  </block>
+  
+    
+</view>

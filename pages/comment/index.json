@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+      "weui-rater": "../../components/rater/index"
+    },
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+}

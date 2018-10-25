@@ -1,0 +1,50 @@
+/* components/rater/index.wxss */
+.weui-rater {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  vertical-align: middle;
+  font-weight: 400;
+  font-style: normal;
+}
+.scroe{display: inline-block; vertical-align: top}
+.weui-rater:before,
+.weui-rater:after {
+  display: table;
+  content: " ";
+}
+.weui-rater:after {
+  clear: both;
+}
+.weui-rater__box {
+  position: relative;
+  display: inline-block;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  color: #ccc;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+.weui-rater__box:last-child {
+  padding-right: 4rpx !important;
+  margin-right: 0 !important;
+}
+.weui-rater__box--disabled {
+  color: #ccc !important;
+  cursor: not-allowed;
+}
+.weui-rater__inner {
+  position: relative;
+  display: inline-block;
+}
+.weui-rater__outer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  overflow: hidden;
+}
+.weui-rater text.tips{ color: #ccc; width: 100%; overflow: hidden; display: block; font-size: 24rpx; text-align: center}
+ 

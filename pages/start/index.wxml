@@ -1,0 +1,45 @@
+<!--pages/start/index.wxml-->
+<view class="page__bd">
+    <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+            <view class="weui-search-bar__box">
+                <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm='searchSubmit'  />
+                <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                    <icon type="clear" size="14"></icon>
+                </view>
+            </view>
+            <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                <icon class="weui-icon-search" type="search" size="14"></icon>
+                <view class="weui-search-bar__text">搜索</view>
+            </label>
+        </view>
+        <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+
+    <weui-scroll datajson="{{[]}}"> </weui-scroll>
+
+
+    <view class='container'>
+      <rater inner-text="{{componentstext}}"  bindincrement="incrementTotal">
+        <view slot="before">这里是插入到组件slot name="before"中的内容</view>      
+        <view slot="after">这里是插入到组件slot name="after"中的内容</view>
+      </rater>
+     <rater inner-text="5"  bindincrement="incrementTotal">
+        <view slot="before">这里是插入到组件slot name="before"中的内容</view>      
+        <view slot="after">{{aftertxt}}</view>
+      </rater>
+      <view>total: {{total}}</view>
+      <button bindtap="changetxt" data-no='changetxtchangetxt3'>changetxt</button>
+    </view>
+   <!-- <block  wx:for="{{[1,2,3,4,5]}}" wx:key="{{item}}">
+    {{index}}: {{item}}
+  </block> -->
+   <weui-rater fontsize='12' score='{{3.5}}' ></weui-rater>
+  
+
+
+
+
+
+</view>

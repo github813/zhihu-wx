@@ -1,0 +1,6 @@
+/**index.wxss**/
+.weui-search-bar{background: #42bd56;border-top: 0; padding-top: 0;}
+.weui-search-bar__cancel-btn{color: #fff}
+.header{padding:  20rpx 20rpx 0 20rpx;line-height:32rpx;}
+.h_title{ font-size: 32rpx;  }
+.h_more{ color:#42bd56; font-size: 28rpx; float: right; }
